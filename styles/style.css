@@ -4,8 +4,8 @@
 :root {
   --main-color: rgb(0, 143, 143);
   --animation-duration-fast: 300ms;
-  --animation-duration-middle: 300ms;
-  --animation-duration-fast: 300ms;
+  --animation-duration-normal: 800ms;
+  --animation-duration-slow: 1500ms;
 }
 html {
   font-size: 14px;
@@ -54,6 +54,8 @@ header {
   align-items: center;
   padding: 30px;
   background-color: darkblue;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.438);
+  border-radius: 6px;
 }
 
 .back-button {
@@ -105,6 +107,15 @@ header {
   justify-content: center;
 }
 
+.card-row{
+  padding: 30px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: grey;
+}
+
 [data-sad^="fade"] {
   display: flex;
   flex-flow: column;
@@ -145,21 +156,13 @@ header {
 }
 
 [data-duration='fast']> div {
-  transition-duration: 0.3s;
+  transition-duration: var(--animation-duration-fast);
 }
 
 [data-duration='normal']> div {
-  transition-duration: 0.8s;
+  transition-duration: var(--animation-duration-normal);
 }
 
 [data-duration='slow']> div {
-  transition-duration: 1.5s;
-}
-.card-row{
-  padding: 30px 0px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  background-color: grey;
+  transition-duration: var(--animation-duration-slow);
 }
