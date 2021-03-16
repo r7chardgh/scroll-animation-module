@@ -4,13 +4,13 @@ var movers = Object.values(target).filter((t) => t.hasAttribute("data-sad")),
   ticking = false;
 window.addEventListener("scroll", onScroll, false);
 
-export function init() {
-  var target = document.getElementsByTagName("div");
-  var tArray = Object.values(target).filter((t) => t.hasAttribute("data-sad"));
-  tArray.map((t, index) => {
-    console.log(t.dataset.abcDuration);
-  });
-}
+// export function init() {
+//   var target = document.getElementsByTagName("div");
+//   var tArray = Object.values(target).filter((t) => t.hasAttribute("data-sad"));
+//   tArray.map((t, index) => {
+    
+//   });
+// }
 //return array which contains data-sad
 
 function onScroll() {
