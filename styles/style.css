@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+:root{
+  --main-color:rgb(0, 143, 143);
+}
+html {
+  font-size: 14px;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+}
+header {
+  position: relative;
+}
+.icon-area {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  margin: 15px 0px;
+  opacity: 0.5;
+}
+.web-icon {
+  display: inline;
+  padding: 5px;
+  font-size: 2rem;
+  background-color: var(--main-color);
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.demo{
+  background-color: var(--main-color);
+}
+.banner-title {
+  font-size: 4rem;
+}
+.box-wrapper {
+  height: 300px;
+  width: 500px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: darkblue;
+}
+
+.back-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  border: 6px solid rgb(82, 10, 124);
+  border-radius: 9px;
+  box-shadow: 1px 1px 9px grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-icon {
+  height: 32px;
+  width: 32px;
+  opacity: 0.8;
+  line-height: 32px;
+  font-weight: 700;
+}
+.back-button:hover {
+  background-color: rgb(82, 10, 124);
+}
+.back-button:hover .button-icon {
+  color: white;
+  opacity: 1;
+}
+.disappear {
+  opacity: 0;
+  pointer-events: none;
+}
+.appear {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.footer-wrapper {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  background-color: chocolate;
+  justify-content: center;
+}
+
+
+[data-sad^="fade"] {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+[data-sad^="fade"] > div {
+  opacity: 0;
+  transition: 0.5s;
+}
+[data-sad="fade-up"][data-view="false"]> div {
+  transform: translateY(100px);
+}
+[data-sad="fade-up"][data-view="true"] > div{
+  transform: translateY(0px);
+  opacity: 1;
+}
+[data-sad="fade-down"][data-view="false"] > div{
+  transform: translateY(-100px);
+}
+[data-sad="fade-down"][data-view="true"]> div{
+  transform: translateY(0px);
+  opacity: 1;
+}
+[data-sad="fade-left"][data-view="false"]> div {
+  margin-left:100px;
+}
+[data-sad="fade-left"][data-view="true"] > div{
+  margin-left: 0px;
+  opacity: 1;
+}
+[data-sad="fade-right"][data-view="false"] > div{
+  margin-left:-100px;
+}
+[data-sad="fade-right"][data-view="true"]> div{
+  margin-left: 0px;
+  opacity: 1;
+}
+
