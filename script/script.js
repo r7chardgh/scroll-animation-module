@@ -8,7 +8,7 @@ window.addEventListener("scroll", onScroll, false);
 //   var target = document.getElementsByTagName("div");
 //   var tArray = Object.values(target).filter((t) => t.hasAttribute("data-sad"));
 //   tArray.map((t, index) => {
-    
+
 //   });
 // }
 //return array which contains data-sad
@@ -34,7 +34,7 @@ function requestTick() {
 function update() {
   var mover = null,
     moverTop = [],
-    WindowHeight = window.innerHeight * 0.6,
+    WindowHeight = window.innerHeight *0.6,
     offset = 0;
 
   for (var m = 0; m < movers.length; m++) {
@@ -50,13 +50,11 @@ function update() {
       mover.getAttribute("data-view") != "true"
     ) {
       mover.setAttribute("data-view", "true");
-      console.log("calculating");
     } else if (
       lastScrollY <= moverTop[m] - WindowHeight &&
       mover.getAttribute("data-view") == "true"
     ) {
       mover.setAttribute("data-view", "false");
-      console.log("calculating");
     }
   }
 
