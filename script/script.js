@@ -34,7 +34,7 @@ function requestTick() {
 function update() {
   var mover = null,
     moverTop = [],
-    halfWindowHeight = window.innerHeight * 0.5,
+    WindowHeight = window.innerHeight * 0.6,
     offset = 0;
 
   for (var m = 0; m < movers.length; m++) {
@@ -46,13 +46,13 @@ function update() {
     mover = movers[m];
 
     if (
-      lastScrollY > moverTop[m] - halfWindowHeight &&
+      lastScrollY > moverTop[m] - WindowHeight &&
       mover.getAttribute("data-view") != "true"
     ) {
       mover.setAttribute("data-view", "true");
       console.log("calculating");
     } else if (
-      lastScrollY <= moverTop[m] - halfWindowHeight &&
+      lastScrollY <= moverTop[m] - WindowHeight &&
       mover.getAttribute("data-view") == "true"
     ) {
       mover.setAttribute("data-view", "false");
