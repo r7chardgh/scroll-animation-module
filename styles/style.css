@@ -16,7 +16,6 @@ header {
   position: relative;
 }
 .icon-area {
-  position: fixed;
   pointer-events: none;
   width: 100%;
   margin: 15px 0px;
@@ -31,6 +30,7 @@ header {
 
 .banner {
   height: 100vh;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -131,9 +131,9 @@ header {
   text-align: left;
 }
 
-@media screen and (max-width: 480px) {
-  .box-wrapper{
-    width: 100vw;
+@media screen and (max-width: 760px) {
+  .box-wrapper {
+    width: 90vw;
   }
 }
 [data-sad^="fade"] {
