@@ -12,9 +12,13 @@ html {
   text-align: center;
   font-family: "Dosis", sans-serif;
 }
+
+/* header */
 header {
   position: relative;
 }
+
+/* icon */
 .icon-area {
   pointer-events: none;
   width: 100%;
@@ -28,6 +32,7 @@ header {
   background-color: var(--main-color);
 }
 
+/* banner */
 .banner {
   height: 100vh;
   padding: 15px;
@@ -43,10 +48,13 @@ header {
 .banner-title {
   font-size: 4rem;
 }
+
+/* box */
 .box-wrapper {
   margin: 100px 0px;
   width: 30vw;
   font-size: 1.2rem;
+  line-height: 2rem;
   color: var(--main-color);
   font-weight: 900;
   display: flex;
@@ -59,6 +67,7 @@ header {
   border-radius: 6px;
 }
 
+/* button */
 .back-button {
   position: fixed;
   z-index: 999;
@@ -97,15 +106,8 @@ header {
 .back-button:active .button-icon {
   color: var(--main-color);
 }
-.disappear {
-  opacity: 0;
-  pointer-events: none;
-}
-.appear {
-  opacity: 1;
-  pointer-events: all;
-}
 
+/* footer */
 .footer-wrapper {
   height: 100px;
   width: 100%;
@@ -122,6 +124,8 @@ header {
 a {
   color: aqua;
 }
+
+/* section */
 .card-row {
   padding: 30px 0px;
   display: flex;
@@ -130,14 +134,8 @@ a {
   width: 100%;
   background-color: grey;
 }
-.code-panel {
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  border-radius: 6px;
-  padding: 15px;
-  text-align: left;
-}
+
+/* subtitle */
 .title2 {
   width: 100vw;
   position: relative;
@@ -162,11 +160,15 @@ a {
   border-bottom: 1px solid currentColor;
 }
 
+/* responsive */
 @media screen and (max-width: 760px) {
   .box-wrapper {
     width: 90vw;
   }
 }
+
+
+/* animation */
 [data-sad] {
   display: flex;
   flex-flow: column;
@@ -178,6 +180,8 @@ a {
   opacity: 0;
   transition-duration: 0.5s;
 }
+
+/* fade */
 [data-sad="fade-up"] > div {
   transform: translateY(100px);
 }
@@ -204,49 +208,6 @@ a {
 }
 [data-sad="fade-right"][data-view="true"] > div {
   transform: translateX(0px);
-  opacity: 1;
-}
-
-[data-duration="fast"] > div {
-  transition-duration: var(--animation-duration-fast);
-}
-
-[data-duration="normal"] > div {
-  transition-duration: var(--animation-duration-normal);
-}
-
-[data-duration="slow"] > div {
-  transition-duration: var(--animation-duration-slow);
-}
-[data-sad^="flip"] > div {
-  transition-duration: 1.5s;
-}
-[data-sad="flip-up"] > div {
-  transform: rotateX(-180deg);
-}
-[data-sad="flip-up"][data-view="true"] > div {
-  transform: rotateX(0deg);
-  opacity: 1;
-}
-[data-sad="flip-down"] > div {
-  transform: rotateX(180deg);
-}
-[data-sad="flip-down"][data-view="true"] > div {
-  transform: rotateX(0deg);
-  opacity: 1;
-}
-[data-sad="flip-left"] > div {
-  transform: rotateY(180deg);
-}
-[data-sad="flip-left"][data-view="true"] > div {
-  transform: rotateY(0deg);
-  opacity: 1;
-}
-[data-sad="flip-right"] > div {
-  transform: rotateY(-180deg);
-}
-[data-sad="flip-right"][data-view="true"] > div {
-  transform: rotateY(0deg);
   opacity: 1;
 }
 
@@ -279,7 +240,53 @@ a {
   transform: translateY(0px) translateX(0px);
   opacity: 1;
 }
+/* animation duration */
+[data-duration="fast"] > div {
+  transition-duration: var(--animation-duration-fast);
+}
 
+[data-duration="normal"] > div {
+  transition-duration: var(--animation-duration-normal);
+}
+
+[data-duration="slow"] > div {
+  transition-duration: var(--animation-duration-slow);
+}
+
+/* flip */
+[data-sad^="flip"] > div {
+  transition-duration: 1.5s;
+}
+[data-sad="flip-up"] > div {
+  transform: rotateX(-180deg);
+}
+[data-sad="flip-up"][data-view="true"] > div {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+[data-sad="flip-down"] > div {
+  transform: rotateX(180deg);
+}
+[data-sad="flip-down"][data-view="true"] > div {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+[data-sad="flip-left"] > div {
+  transform: rotateY(180deg);
+}
+[data-sad="flip-left"][data-view="true"] > div {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+[data-sad="flip-right"] > div {
+  transform: rotateY(-180deg);
+}
+[data-sad="flip-right"][data-view="true"] > div {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+/* zoom */
 [data-sad="zoom-in"] > div {
   transform: scale(0.5, 0.5);
 }
@@ -303,7 +310,6 @@ a {
   transform: scale(1, 1) translateY(0px);
   opacity: 1;
 }
-
 [data-sad="zoom-in-left"] > div {
   transform-origin: right;
   transform: scale(0.5, 0.5) translateX(50px);
@@ -356,13 +362,15 @@ a {
   transform: scale(1, 1) translateX(0px);
   opacity: 1;
 }
+
+/* expand */
 [data-sad="expand"] {
   width: 0vw;
   margin: 0px 50vw;
   overflow: hidden;
   transition: 1.8s;
 }
-[data-sad="expand"][data-view="true"]  {
+[data-sad="expand"][data-view="true"] {
   width: 100vw;
   margin: 0px 0vw;
 }
