@@ -46,9 +46,15 @@ header {
 }
 .site-bg::before{
   content: 'Photo by thom masat on Unsplash';
+  background-color: var(--main-dark-color);
+  box-shadow: 5px 5px 0px #000;
+  padding: 5px;
   position: absolute;
   left: 15px;
   bottom: 15px;
+}
+.site-bg::before:hover{
+  color: red;
 }
 /* icon */
 .icon-area {
@@ -72,13 +78,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
 }
-.demo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*background-color: var(--main-color);*/
-  overflow: hidden;
-}
+
 .banner-title {
   font-size: 4rem;
 }
@@ -161,6 +161,15 @@ a {
 }
 
 /* section */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background-color: var(--main-color);*/
+  overflow: hidden;
+  margin: 100px 0;
+}
+
 .card-row {
   padding: 30px 0px;
   display: flex;
@@ -199,6 +208,10 @@ a {
 @media screen and (max-width: 760px) {
   .box-wrapper {
     width: 90vw;
+  }
+  .title2{
+    width: 80vw;
+    margin: 5px 0;
   }
 }
 
