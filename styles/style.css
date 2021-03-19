@@ -3,8 +3,8 @@
 }
 :root {
   --main-color: rgb(0, 143, 143);
-  --animation-duration-fast: 300ms;
-  --animation-duration-normal: 800ms;
+  --animation-duration-fast: 500ms;
+  --animation-duration-normal: 900ms;
   --animation-duration-slow: 1500ms;
 }
 html {
@@ -173,7 +173,7 @@ a {
 
 /* animation */
 [data-sad] {
-  transition-duration: 1s;
+  transition-duration: var(--animation-duration-normal);
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -226,23 +226,22 @@ transform: translate(0);
 /* flip */
 [data-sad^="flip"] {
   opacity: 0;
-  transition-duration: 3s;
 }
 [data-sad^="flip"][data-view="true"] {
   transform: perspective(1800px) rotate(0);
   opacity: 1;
 }
 [data-sad="flip-up"] {
-  transform: rotateX(-180deg);
-}
-[data-sad="flip-down"] {
   transform: rotateX(180deg);
 }
+[data-sad="flip-down"] {
+  transform: rotateX(-180deg);
+}
 [data-sad="flip-left"] {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 [data-sad="flip-right"] {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
 }
 /* zoom */
 [data-sad^="zoom"] {
@@ -289,6 +288,9 @@ transform: translate(0);
 }
 
 /* clip */
+[data-sad^='clip']{
+  transition-duration: var(--animation-duration-slow);
+}
 [data-sad="clip-circle"] {
   clip-path: circle(0%);
 }
