@@ -3,14 +3,19 @@
 }
 :root {
   --main-color: rgb(0, 143, 143);
+  --main-light-color: rgb(0, 196, 196);
+  --main-dark-color: rgb(0, 66, 66);
+  --footer-color:rgb(66, 66, 66);
   --animation-duration-fast: 500ms;
   --animation-duration-normal: 900ms;
   --animation-duration-slow: 1500ms;
+  --animation-duration-slowest:3000ms;
 }
 html {
   font-size: 14px;
   text-align: center;
   font-family: "Dosis", sans-serif;
+  color:#fff;
 }
 
 /* header */
@@ -18,12 +23,38 @@ header {
   position: relative;
 }
 
+/* site-bg */
+.site-bg{
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../pics/thom-masat-t_YWqXcK5lw-unsplash-greyscale.jpg');
+}
+.site-bg::after{
+  content: '';
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+.site-bg::before{
+  content: 'Photo by thom masat on Unsplash';
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
 /* icon */
 .icon-area {
   pointer-events: none;
   width: 100%;
   margin: 15px 0px;
-  opacity: 0.5;
 }
 .web-icon {
   display: inline;
@@ -45,7 +76,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--main-color);
+  /*background-color: var(--main-color);*/
   overflow: hidden;
 }
 .banner-title {
@@ -79,7 +110,7 @@ header {
   bottom: 30px;
   height: 50px;
   width: 50px;
-  background-color: chocolate;
+  background-color: var(--main-dark-color);
   color: var(--main-color);
   font-size: 1.5rem;
   border-radius: 15px;
@@ -102,10 +133,10 @@ header {
   box-shadow: 1px 1px 15px 0px rgb(90, 90, 90);
 }
 .back-button:hover {
-  background-color: rgb(10, 124, 76);
+  background-color: var(--main-color);
 }
 .back-button:active {
-  background-color: rgb(82, 10, 124);
+  background-color: var(--main-light-color);
 }
 .back-button:active .button-icon {
   color: var(--main-color);
@@ -118,7 +149,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   padding: 15px 30px;
-  background-color: rgb(150, 70, 14);
+  background-color: var(--footer-color);
   justify-content: center;
 }
 .footer-watermark {
@@ -126,7 +157,7 @@ header {
   align-items: center;
 }
 a {
-  color: aqua;
+  color: var(--main-light-color);
 }
 
 /* section */
@@ -136,14 +167,14 @@ a {
   flex-flow: row wrap;
   justify-content: space-evenly;
   width: 100%;
-  background-color: grey;
+  background-color: var(--main-color);
 }
 
 /* subtitle */
 .title2 {
-  width: 100vw;
+  width: 40vw;
   position: relative;
-  margin: 5px 0px;
+  margin: 5px 40vw;
   font-size: 2rem;
   padding: 10px;
 }
@@ -223,6 +254,10 @@ transform: translate(0);
   transition-duration: var(--animation-duration-slow);
 }
 
+[data-duration="slowest"] {
+  transition-duration: var(--animation-duration-slowest);
+}
+
 /* flip */
 [data-sad^="flip"] {
   opacity: 0;
@@ -289,7 +324,7 @@ transform: translate(0);
 
 /* clip */
 [data-sad^='clip']{
-  transition-duration: var(--animation-duration-slow);
+  transition-duration: var(--animation-duration-slowest);
 }
 [data-sad="clip-circle"] {
   clip-path: circle(0%);

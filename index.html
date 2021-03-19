@@ -32,8 +32,9 @@
     />
   </head>
   <body>
+    <div class="site-bg"></div>
     <header>
-      <div  class="icon-area">
+      <div class="icon-area">
         <div class="web-icon">Scroll Animation</div>
       </div>
     </header>
@@ -42,7 +43,9 @@
         <div class="button-icon">Up</div>
       </div>
       <div id="banner" class="banner">
-        <div id="t1" class="banner-title">scroll down to see...</div>
+        <div id="t1" class="banner-title" data-sad="fade-up">
+          scroll down to see...
+        </div>
       </div>
       <div class="demo">
         <div data-sad="fade-up" class="box-wrapper">
@@ -110,8 +113,8 @@
           </p>
         </div>
         <div class="card-row">
-          <div data-sad="clip-circle">
-            <div class="title2"><p>Awesome Title 101 fsadfdsfsd</p></div>
+          <div class="title2" data-sad="clip-circle">
+            <p>Transition Duration</p>
           </div>
           <div data-sad="fade-down" data-duration="fast" class="box-wrapper">
             <p>
@@ -263,7 +266,7 @@
     <footer>
       <div class="footer-wrapper">
         <div class="footer-watermark">
-          <pre>This is coded by <a href="/">Richard Tsang</a></pre>
+          <pre>Coded by <a href="/">Richard Tsang</a></pre>
         </div>
       </div>
     </footer>
