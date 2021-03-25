@@ -47,7 +47,8 @@ export const init = () => {
         mover.setAttribute("data-view", "true");
       } else if (
         lastScrollY <= moverTop[m] - WindowHeight &&
-        mover.getAttribute("data-view") == "true"
+        mover.getAttribute("data-view") == "true"&&
+        mover.getAttribute('data-fill-mode') !='forwards'
       ) {
         mover.setAttribute("data-view", "false");
       }
@@ -60,3 +61,11 @@ export const init = () => {
 };
 
 init();
+
+
+
+
+//default setting
+//transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+//transition-duration: var(--animation-duration-normal);
+ 
