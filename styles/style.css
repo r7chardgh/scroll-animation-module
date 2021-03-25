@@ -27,12 +27,13 @@ header {
 .site-bg {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../pics/thom-masat-t_YWqXcK5lw-unsplash-greyscale.jpg");
+}
+.site-bg>img{
+width: 100%;
 }
 .site-bg::after {
   content: "";

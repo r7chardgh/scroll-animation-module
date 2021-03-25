@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    meta name="theme-color" content="#ffffff">
     <title>scroll-animation</title>
     <link
       rel="apple-touch-icon"
@@ -32,7 +33,13 @@
     />
   </head>
   <body>
-    <div class="site-bg"></div>
+    <picture class="site-bg">
+      <source
+        srcset="/pics/thom-masat-t_YWqXcK5lw-unsplash-greyscale.webp"
+        type="image/webp"
+      />
+      <img src="/pics/thom-masat-t_YWqXcK5lw-unsplash-greyscale.jpg" alt="Hong Kong City Skyline">
+    </picture>
     <header>
       <div class="icon-area">
         <div class="web-icon">Scroll Animation</div>
@@ -49,7 +56,7 @@
       </div>
       <div class="section">
         <div data-sad="clip-circle" class="title2">Fade</div>
-        <div data-sad="fade-up" data-fill-mode='forwards' class="box-wrapper">
+        <div data-sad="fade-up" data-fill-mode="forwards" class="box-wrapper">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
             accusamus amet perferendis molestias magnam minima? Dolorum, ipsum.
