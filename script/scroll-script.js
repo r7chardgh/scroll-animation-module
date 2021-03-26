@@ -1,11 +1,26 @@
-export function run() {
-  var movers = document.querySelectorAll(".mover.hide-left"),
-    lastScrollY = 0,
+export default (function () {
+  const target = document.getElementsByTagName("div");
+  const movers = Object.values(target).filter((t) =>
+    t.hasAttribute("data-sad")
+  );
+  var lastScrollY = window.scrollY,
     ticking = false;
-
+  const WindowHeight = window.innerHeight * 0.6;
+  update();
   function onScroll() {
     lastScrollY = window.scrollY;
     requestTick();
+  }
+
+  var st = document.getElementById("scroll-back-btn");
+  st.addEventListener("click", scrollTop);
+
+  function scrollTop() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }
 
   function requestTick() {
@@ -14,12 +29,9 @@ export function run() {
       ticking = true;
     }
   }
-
   function update() {
     var mover = null,
-      moverTop = [],
-      halfWindowHeight = window.innerHeight * 0.5,
-      offset = 0;
+      moverTop = [];
 
     for (var m = 0; m < movers.length; m++) {
       mover = movers[m];
@@ -28,18 +40,21 @@ export function run() {
 
     for (var m = 0; m < movers.length; m++) {
       mover = movers[m];
-
-      if (lastScrollY > moverTop[m] - halfWindowHeight) {
-        mover.classList.add("move-in-left");
-      } else if (lastScrollY <= moverTop[m] - halfWindowHeight) {
-        mover.classList.remove("move-in-left");
+      if (
+        lastScrollY > moverTop[m] - WindowHeight &&
+        mover.getAttribute("data-view") != "true"
+      ) {
+        mover.setAttribute("data-view", "true");
+      } else if (
+        lastScrollY <= moverTop[m] - WindowHeight &&
+        mover.getAttribute("data-view") == "true" &&
+        mover.getAttribute("data-fill-mode") != "forwards"
+      ) {
+        mover.setAttribute("data-view", "false");
       }
     }
 
     ticking = false;
   }
-
-  // only listen for scroll events
-
   window.addEventListener("scroll", onScroll, false);
-}
+});
