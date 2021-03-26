@@ -11,6 +11,7 @@
   --animation-duration-slow: 1500ms;
   --animation-duration-slowest: 3000ms;
 }
+
 html {
   font-size: 14px;
   text-align: center;
@@ -33,7 +34,9 @@ header {
   height: 100vh;
 }
 .site-bg>img{
-width: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .site-bg::after {
   content: "";
@@ -91,7 +94,7 @@ width: 100%;
   width: 30vw;
   font-size: 1.2rem;
   line-height: 2rem;
-  color: var(--main-color);
+  color: var(--main-dark-color);
   font-weight: 900;
   display: flex;
   flex-flow: column wrap;
@@ -114,6 +117,7 @@ width: 100%;
   background-color: var(--main-dark-color);
   color: var(--main-color);
   font-size: 1.5rem;
+  border: 3px solid #fff;
   border-radius: 15px;
   box-shadow: 1px 1px 15px 0px rgb(51, 51, 51);
   display: flex;
@@ -130,6 +134,7 @@ width: 100%;
   line-height: 32px;
   font-weight: 700;
   background-color: #fff;
+  color: #000;
   border-radius: 9px;
   box-shadow: 1px 1px 15px 0px rgb(90, 90, 90);
 }
@@ -215,7 +220,6 @@ a {
     margin: 5px 0;
   }
 }
-
 /* animation */
 [data-sad] {
   transition-duration: var(--animation-duration-normal);
