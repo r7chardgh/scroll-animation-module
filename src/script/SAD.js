@@ -1,4 +1,4 @@
-const SAD = (function () {
+export const SAD = (function () {
   const unit = {
     init: function () {
       const target = document.getElementsByTagName("div");
@@ -52,5 +52,3 @@ const SAD = (function () {
   };
   return unit;
 })();
-
-export default SAD;
