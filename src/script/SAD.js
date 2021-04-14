@@ -1,4 +1,4 @@
-const SAD =  (function () {
+const SAD = (function () {
   const unit = {
     init: function () {
       const target = document.getElementsByTagName("div");
@@ -13,18 +13,7 @@ const SAD =  (function () {
         lastScrollY = window.scrollY;
         requestTick();
       }
-    
-      var st = document.getElementById("scroll-back-btn");
-      st.addEventListener("click", scrollTop);
-    
-      function scrollTop() {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      }
-    
+
       function requestTick() {
         if (!ticking) {
           requestAnimationFrame(update);
@@ -34,12 +23,12 @@ const SAD =  (function () {
       function update() {
         var mover = null,
           moverTop = [];
-    
+
         for (var m = 0; m < movers.length; m++) {
           mover = movers[m];
           moverTop[m] = mover.offsetTop;
         }
-    
+
         for (var m = 0; m < movers.length; m++) {
           mover = movers[m];
           if (
@@ -55,12 +44,12 @@ const SAD =  (function () {
             mover.setAttribute("data-view", "false");
           }
         }
-    
+
         ticking = false;
       }
       window.addEventListener("scroll", onScroll, false);
     },
-  }
+  };
   return unit;
 })();
 
