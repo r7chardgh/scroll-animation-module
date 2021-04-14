@@ -1,0 +1,22 @@
+{
+  "name": "@r7chardgh/sad",
+  "version": "1.0.0",
+  "description": "A simple scroll animation module",
+  "main": "./src/script/SAD.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r7chardgh/scroll-animation-module.git"
+  },
+  "keywords": [
+    "animation"
+  ],
+  "author": "Richard Tsang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r7chardgh/scroll-animation-module/issues"
+  },
+  "homepage": "https://github.com/r7chardgh/scroll-animation-module#readme"
+}
