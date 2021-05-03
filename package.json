@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@r7chardgh/sad": "^1.0.0",
     "serve": "^11.3.2"
+  },
+  "dependencies": {
+    "@r7chardgh/sad": "^1.0.0"
   }
 }
