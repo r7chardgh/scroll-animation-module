@@ -1,4 +1,5 @@
 export const init =  function () {
+
       const target = document.getElementsByTagName("div");
       const movers = Object.values(target).filter((t) =>
         t.hasAttribute("data-sad")
@@ -47,3 +48,4 @@ export const init =  function () {
       }
       window.addEventListener("scroll", onScroll, false);
     }
+
