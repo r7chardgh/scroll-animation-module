@@ -1,6 +1,4 @@
-export const SAD = (function () {
-  const unit = {
-    init: function () {
+export const init =  function () {
       const target = document.getElementsByTagName("div");
       const movers = Object.values(target).filter((t) =>
         t.hasAttribute("data-sad")
@@ -48,7 +46,4 @@ export const SAD = (function () {
         ticking = false;
       }
       window.addEventListener("scroll", onScroll, false);
-    },
-  };
-  return unit;
-})();
+    }
