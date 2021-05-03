@@ -6,10 +6,6 @@
   --main-light-color: rgb(0, 196, 196);
   --main-dark-color: rgb(0, 66, 66);
   --footer-color: rgb(66, 66, 66);
-  --animation-duration-fast: 500ms;
-  --animation-duration-normal: 900ms;
-  --animation-duration-slow: 1500ms;
-  --animation-duration-slowest: 3000ms;
 }
 
 html {

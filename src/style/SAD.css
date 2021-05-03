@@ -1,3 +1,9 @@
+:root {
+  --animation-duration-fast: 500ms;
+  --animation-duration-normal: 900ms;
+  --animation-duration-slow: 1500ms;
+  --animation-duration-slowest: 3000ms;
+}
 /* animation */
 [data-sad] {
   transition-duration: var(--animation-duration-normal);
