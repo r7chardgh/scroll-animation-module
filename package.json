@@ -7,10 +7,8 @@
     "serve": "npx serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@r7chardgh/sad": "file:.."
-  },
   "devDependencies": {
+    "@r7chardgh/sad": "^1.0.0",
     "serve": "^11.3.2"
   }
 }
