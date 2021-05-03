@@ -1,10 +1,10 @@
 # Scroll Animation Module
-===
+
 ## description
 A simple scroll animation module by making use of data-* attribute
 
 ## Attribute explaination
-===
+
 ### data-sad = "<--type-->"
 
 1. data-sad:  an indicator for module to activate animation.
