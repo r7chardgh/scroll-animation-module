@@ -1,5 +1,3 @@
-import SAD from "../../../src/script/SAD.js";
-
 var st = document.getElementById("scroll-back-btn");
 st.addEventListener("click", scrollTop);
 
@@ -10,5 +8,3 @@ function scrollTop() {
     behavior: "smooth",
   });
 }
-
-SAD.init();
