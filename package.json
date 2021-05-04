@@ -4,11 +4,13 @@
   "description": "A simple scroll animation module",
   "main": "./dist/SAD.cjs.js",
   "module": "./dist/SAD.esm.js",
+  "files":["dist","src"],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "test": "exit 0",
-    "deploy":"gh-pages -d demo"
+    "deploy":"gh-pages -d demo",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
