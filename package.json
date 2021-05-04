@@ -9,8 +9,5 @@
   },
   "devDependencies": {
     "serve": "^11.3.2"
-  },
-  "dependencies": {
-    "@r7chardgh/sad": "^1.0.0"
   }
 }
