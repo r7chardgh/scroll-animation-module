@@ -14,3 +14,15 @@
   ```sh
   npm run serve
   ```
+  
+### Add CDN
+
+1. Add CSS Style
+  ```sh
+  https://cdn.jsdelivr.net/gh/r7chardgh/scroll-animation-module@1.0.0/src/style/SAD.css
+  ```
+
+2. Add JS
+  ```sh
+  https://cdn.jsdelivr.net/gh/r7chardgh/scroll-animation-module/dist/SAD.umd.js
+  ```
