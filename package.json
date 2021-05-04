@@ -4,12 +4,15 @@
   "description": "A simple scroll animation module",
   "main": "./dist/SAD.cjs.js",
   "module": "./dist/SAD.esm.js",
-  "files":["dist","src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "test": "exit 0",
-    "deploy":"gh-pages -d demo",
+    "deploy": "gh-pages -d demo",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -27,6 +30,7 @@
   },
   "homepage": "https://github.com/r7chardgh/scroll-animation-module#readme",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "gh-pages": "^3.1.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.46.0",
