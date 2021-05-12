@@ -1,0 +1,13 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "A demo for SAD module",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
+  }
+}
