@@ -26,9 +26,9 @@ This module has two ways to access
 
 1. Install package
 ```sh
-    npm install 
+    npm install @r7chardgh/sad@1.0.0
 ```
-- It requires personal access token for installing github package via npm (you can download the code via github)
+- It requires personal access token for installing github package via npm (you can download the package (sad-1.0.0-npm.tgz) via github - url: https://github.com/r7chardgh/scroll-animation-module/packages/769206)
 - The bundled script is located at `dist/` and stylesheet is located at `src/style/SAD.css`
 
 2. Import style
