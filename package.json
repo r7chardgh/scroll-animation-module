@@ -1,6 +1,6 @@
 {
   "name": "@r7chardgh/sad",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple scroll animation module",
   "main": "./dist/SAD.cjs.js",
   "module": "./dist/SAD.esm.js",
