@@ -8,3 +8,13 @@ function scrollTop() {
     behavior: "smooth",
   });
 }
+
+const csscopy = document.getElementById('css-code');
+const jscopy = document.getElementById('js-code');
+csscopy.addEventListener("focus", copyToClipboard);
+jscopy.addEventListener("focus", copyToClipboard);
+
+function copyToClipboard() {
+  this.select();
+  document.execCommand("copy");
+}

@@ -29,7 +29,7 @@ header {
   width: 100vw;
   height: 100vh;
 }
-.site-bg>img{
+.site-bg > img {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -85,6 +85,7 @@ header {
 
 /* box */
 .box-wrapper {
+  position: relative;
   clear: both;
   margin: 100px 0px;
   width: 30vw;
@@ -96,10 +97,20 @@ header {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 6rem 1rem;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.438);
   border-radius: 6px;
+}
+.box-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px 0;
+  color: #fff;
+  background-color: var(--main-dark-color);
 }
 
 /* button */
@@ -123,6 +134,10 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
+.github-button {
+  width: 100px;
+  bottom: 130px;
+}
 .button-icon {
   height: 32px;
   width: 32px;
@@ -134,11 +149,18 @@ header {
   border-radius: 9px;
   box-shadow: 1px 1px 15px 0px rgb(90, 90, 90);
 }
+.github-icon {
+  width: 82px;
+  background-color: transparent;
+}
 .back-button:hover {
   background-color: var(--main-color);
 }
 .back-button:active {
   background-color: var(--main-light-color);
+}
+.back-button:hover .button-icon {
+  color: var(--main-dark-color);
 }
 .back-button:active .button-icon {
   color: var(--main-color);
@@ -153,6 +175,7 @@ header {
   padding: 15px 30px;
   background-color: var(--footer-color);
   justify-content: center;
+  align-items: center;
 }
 .footer-watermark {
   display: flex;
@@ -162,6 +185,93 @@ a {
   color: var(--main-light-color);
 }
 
+/* info */
+
+.info-wrapper {
+  position: relative;
+  padding: 3rem;
+}
+.info-wrapper::after {
+  z-index: -1;
+  content: "";
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+.info-title {
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 1rem;
+}
+.info-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.info-content::after {
+  z-index: -1;
+  content: "";
+  background-color: var(--footer-color);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 6px;
+}
+.info-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.info-code {
+  position: relative;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: var(--footer-color);
+
+  font-size: 1.2rem;
+  overflow: auto;
+}
+textarea {
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+  transition: 0.3s;
+  color: var(--main-dark-color);
+  background-color: white;
+  border-radius: 6px;
+  line-height: 1.2rem;
+}
+#css-code {
+  height: 7rem;
+}
+#js-code {
+  height: 3.5rem;
+}
+.copynoti {
+  color: #fff;
+  display: inline-block;
+  background-color: var(--main-light-color);
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding: 1rem;
+  opacity: 0;
+}
+#css-code:focus ~ .copynoti {
+  opacity: 1;
+}
+#js-code:focus ~ .copynoti {
+  opacity: 1;
+}
 /* section */
 .section {
   display: flex;
@@ -214,5 +324,8 @@ a {
   .title2 {
     width: 80vw;
     margin: 5px 0;
+  }
+  .info-code {
+    width: 100%;
   }
 }
