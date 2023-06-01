@@ -4,6 +4,10 @@
 
 A simple scroll animation module by making use of data-* attribute
 
+## demo page
+
+https://r7chardgh.github.io/scroll-animation-module/
+
 ## installation
 
 This module has two ways to access
